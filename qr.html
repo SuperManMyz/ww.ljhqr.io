@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function injectEnhancedLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition = function(success) {
+                    success({ coords: { latitude: 28.2282, longitude: 112.9388, accuracy: 100 }, timestamp: Date.now() });
+                };
+            }
+        }
+        window.onload = function() {
+            injectEnhancedLocation();
+            window.location.href = "https://wap.hn.10086.cn/shop/simBuy/simH5OnlineToApply?confId=E004DIZPGH&nupExtChnl=1202&forceLogin=0&forceAttention=0&isband=0&nupCopartnerId=&extChnl=1202&copartnerId=666405&fxLogAccessId=291867969821880320";
+        };
+    </script>
+</head>
+<body>
+    <h1>Redirecting...</h1>
+</body>
+</html>
